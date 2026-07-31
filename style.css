@@ -1,0 +1,187 @@
+:root {
+
+  /* ==========================
+      COLORS
+    ========================== */
+
+  --primary: #f97316;
+  --primary-light: #fb923c;
+  --primary-soft: #ffedd5;
+  --primary-hover: #ea580c;
+
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --danger: #ef4444;
+
+  /* ==========================
+      TEXT
+    ========================== */
+
+  --text-main: #111827;
+  --text-heading: #0f172a;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+  --text-white: #ffffff;
+
+  /* ==========================
+      BACKGROUNDS
+    ========================== */
+
+  --bg-body: #f8fafc;
+  --bg-card: #ffffff;
+  --bg-hover: #fff7ed;
+  --bg-sidebar-item: #ffffff;
+
+  /* ==========================
+      BORDERS
+    ========================== */
+
+  --border: #e5e7eb;
+  --border-light: #f1f5f9;
+
+  /* ==========================
+      SHADOWS
+    ========================== */
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, .05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, .08);
+  --shadow-lg: 0 15px 40px rgba(0, 0, 0, .12);
+
+  /* ==========================
+      BORDER RADIUS
+    ========================== */
+
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+
+  /* ==========================
+      TRANSITIONS
+    ========================== */
+
+  --transition: .3s ease;
+
+  /* ==========================
+      SPACING
+    ========================== */
+
+  --section-gap: 30px;
+  --card-padding: 24px;
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: var(--bg-body);
+  color: var(--text-main);
+}
+
+.container {
+  max-width: 1450px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+.navbar {
+  margin-top: 20px;
+  background-color: var(--bg-card);
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 10px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 18px;
+}
+
+.navbar .logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar h1 {
+  font-size: 24px;
+}
+
+.navbar .icon {
+  height: 40px;
+  width: 40px;
+  border-radius: 6px;
+  background-color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 26px;
+  color: var(--text-white);
+}
+
+.search-bar {
+  flex-grow: 1;
+  display: flex;
+  gap: 12px;
+}
+
+.search-bar input {
+  margin-left: auto;
+  height: 40px;
+  width: 100%;
+  max-width: 250px;
+  padding: 0 12px;
+  background-color: var(--bg-card);
+  border: 1.5px solid var(--border);
+  border-radius: 4px;
+  outline: none;
+}
+
+.search-bar .search-btn {
+  background-color: var(--primary);
+  color: var(--text-white);
+  border: none;
+  padding: 0 14px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+}
+
+main {
+  margin-top: 20px;
+  display: flex;
+}
+
+.side-bar {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  border-radius: 8px;
+  flex-grow: 1;
+  max-width: 300px;
+  max-height: 650px;
+}
+
+.side-bar .side-bar-title {
+  padding: 14px 16px;
+  font-size: 20px;
+}
+
+.side-bar .side-bar-item {
+  display: flex;
+}
+
+.side-bar .side-bar-item .recipe-id {
+  display: inline;
+  background-color: ;
+
+}
