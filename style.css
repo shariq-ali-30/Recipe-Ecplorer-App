@@ -65,11 +65,25 @@
   --badge-bg: #FFF7ED;
   --badge-color: #EA580C;
 
-  /* ==========================
-       STAR RATING
-    ========================== */
+  --prep-icon-bg: #F0FDF4;
+  --prep-icon-color: #65A30D;
+  --prep-icon-border: 1px solid #DCFCE7;
 
-  --rating-color: #F59E0B;
+  --cook-icon-bg: #FFF7ED;
+  --cook-icon-color: #F97316;
+  --cook-icon-border: 1px solid #FED7AA;
+
+  --calories-icon-bg: #F5F3FF;
+  --calories-icon-color: #7C3AED;
+  --calories-icon-border: 1px solid #DDD6FE;
+
+  --meal-icon-bg: #EFF6FF;
+  --meal-icon-color: #2563EB;
+  --meal-icon-border: 1px solid #DBEAFE;
+
+  --tag-icon-bg: #FDF2F8;
+  --tag-icon-color: #EC4899;
+  --tag-icon-border: 1px solid #FBCFE8;
 
   /* ==========================
        IMAGE
@@ -100,11 +114,10 @@ body {
 .container {
   max-width: 1450px;
   margin: 0 auto;
-  padding: 0 30px;
+  padding: 20px 30px;
 }
 
 .header {
-  margin-top: 20px;
   background-color: var(--card-bg);
   box-shadow: var(--card-shadow);
   border: var(--card-border);
@@ -189,8 +202,6 @@ main {
   border: var(--card-border);
   box-shadow: var(--card-shadow);
   border-radius: 8px;
-  height: 80vh;
-  max-height: 650px;
   overflow: auto;
 }
 
@@ -355,7 +366,7 @@ main {
   white-space: nowrap;
 }
 
-.detailed-recipe .top-content .left .meta-info div:last-child{
+.detailed-recipe .top-content .left .meta-info div:last-child {
   border-right: none;
   padding-right: 0;
 }
@@ -366,6 +377,7 @@ main {
 }
 
 .detailed-recipe .top-content .image {
+  margin-top: -50px;
   width: 100%;
   max-width: 350px;
   height: 220px;
@@ -380,7 +392,7 @@ main {
 }
 
 .detailed-recipe .cards {
-  margin: 20px 0;
+  margin-top: 20px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -388,6 +400,8 @@ main {
 }
 
 .detailed-recipe .cards .card {
+  width: 100%;
+  max-width: 145px;
   display: flex;
   gap: 12px;
   padding: 12px;
@@ -406,8 +420,28 @@ main {
 }
 
 .detailed-recipe .cards .card.preparation-time .icon {
-  background-color: #F0FDF4;
-  color: #65A30D;
+  background-color: var(--prep-icon-bg);
+  color: var(--prep-icon-color);
+}
+
+.detailed-recipe .cards .card.cook-time .icon {
+  background-color: var(--cook-icon-bg);
+  color: var(--cook-icon-color);
+}
+
+.detailed-recipe .cards .card.calories .icon {
+  background-color: var(--calories-icon-bg);
+  color: var(--calories-icon-color);
+}
+
+.detailed-recipe .cards .card.meal-type .icon {
+  background-color: var(--meal-icon-bg);
+  color: var(--meal-icon-color);
+}
+
+.detailed-recipe .cards .card.tags .icon {
+  background-color: var(--tag-icon-bg);
+  color: var(--tag-icon-color);
 }
 
 .detailed-recipe .cards .card .details p {
@@ -421,4 +455,84 @@ main {
   font-size: 14px;
   display: block;
   font-weight: 500;
+}
+
+.divider-x {
+  flex-grow: 1;
+  border-bottom: var(--divider);
+  margin: 20px 0;
+}
+
+.ingredients-and-instructions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.ingredients-and-instructions .title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.ingredients-and-instructions .title .icon {
+  height: 28px;
+  width: 28px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--prep-icon-bg);
+  color: var(--prep-icon-color);
+  font-size: 18px;
+}
+
+.ingredients .title .icon {
+  background-color: var(--prep-icon-bg);
+  color: var(--prep-icon-color);
+}
+
+.instructions .title .icon {
+  background-color: var(--cook-icon-bg);
+  color: var(--cook-icon-color);
+}
+
+.ingredients-and-instructions .ingredients {
+  padding-right: 80px;
+}
+
+.ingredients-and-instructions .ingredients ul {
+  margin-left: 20px;
+}
+
+.ingredients-and-instructions .ingredients ul li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.ingredients-and-instructions .instructions .instruction-item {
+  display: flex;
+  gap: 10px;
+  flex-grow: 1;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.ingredients-and-instructions .instructions .instruction-item span {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cook-icon-bg);
+  color: var(--cook-icon-color);
+}
+
+.ingredients-and-instructions .instructions .instruction-item p {
+  line-height: 20px;
+  max-width: 400px;
 }
