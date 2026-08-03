@@ -193,15 +193,19 @@ body {
 main {
   margin-top: 20px;
   display: flex;
+  flex-wrap: wrap;
   gap: 20px;
 }
 
 .side-bar {
   flex-shrink: 0;
+  flex-grow: 1;
+  max-width: 400px;
   background-color: var(--card-bg);
   border: var(--card-border);
   box-shadow: var(--card-shadow);
   border-radius: 8px;
+  max-height: 750px;
   overflow: auto;
 }
 
@@ -286,11 +290,7 @@ main {
 }
 
 .side-bar .recipe-item .recipe-details .recipe-name {
-  max-width: 190px;
   font-size: 16px;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .side-bar .recipe-item .recipe-details .cuisine {
@@ -377,7 +377,6 @@ main {
 }
 
 .detailed-recipe .top-content .image {
-  margin-top: -50px;
   width: 100%;
   max-width: 350px;
   height: 220px;
