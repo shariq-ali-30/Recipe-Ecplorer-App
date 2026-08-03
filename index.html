@@ -36,188 +36,31 @@
             <div class="side-bar">
                 <h2 class="side-bar-title">Recipes</h2>
 
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <i class="ph ph-magnifying-glass"></i>
+                    </div>
+                    <h3>No Recipes Found</h3>
+                    <p>No recipes match your search criteria. Try searching with a different keyword.</p>
+                </div>
+
                 <div class="recipes-container">
-                    <!-- <div class="recipe-item">
-
-                        <div class="recipe-id">1</div>
-
-                        <div class="recipe-details">
-
-                            <div class="recipe-image">
-                                <img
-                                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3SWRQ4DfWGkH43SYDaC04zO1-OFRRZP_o8q0pks8f4A&s=10">
-                            </div>
-
-                            <div>
-                                <h3 class="recipe-name">Creamy Garlic Pasta</h3>
-                                <p class="cuisine">Italian</p>
-                                <div class="rating-and-time">
-                                    <div class="rating">
-                                        <i class="ph-bold ph-star"></i>
-                                        <span>4.7</span>
-                                    </div>
-                                    <div class="dot"></div>
-                                    <div class="time">
-                                        <i class="ph-bold ph-clock"></i>
-                                        <span>25 mins</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div> -->
                 </div>
 
             </div>
 
             <div class="detailed-recipe">
 
-                <p class="recipe-number">Recipe #1</p>
-
-                <div class="top-content">
-
-                    <div class="left">
-                        <h2 class="recipe-name">Creamy Garlic Pasta</h2>
-                        <div class="meta-info">
-                            <div class="rating"><i class="ph-bold ph-star"></i> <span id="rating">4.7</span></div>
-                            <div class="rating"><i class="ph-bold ph-globe-hemisphere-west"></i> <span
-                                    id="cuisine">Italian</span></div>
-                            <div class="rating"><i class="ph-bold ph-chart-bar"></i> <span id="difficulty">Easy</span>
-                            </div>
-                            <div class="rating"><i class="ph-bold ph-clock"></i> <span id="totalTime">25 mins</span>
-                            </div>
-                            <div class="rating"><i class="ph-bold ph-users"></i> <span id="totalTime">2 Servings</span>
-                            </div>
-                        </div>
+                <div class="empty-state">
+                    <div class="empty-icon">
+                        <i class="ph ph-hand-pointing"></i>
                     </div>
-
-                    <div class="image">
-                        <img
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3SWRQ4DfWGkH43SYDaC04zO1-OFRRZP_o8q0pks8f4A&s=10">
-                    </div>
+                    <h2>No Recipe Selected</h2>
+                    <p>Select a recipe from the sidebar menu to view its complete details, read the ingredients, and see
+                        the instructions.</p>
                 </div>
 
-                <div class="cards">
-
-                    <div class="card preparation-time">
-                        <div class="icon">
-                            <i class="ph-bold ph-timer"></i>
-                        </div>
-                        <div class="details">
-                            <p>Prep Time</p>
-                            <span>10 mins</span>
-                        </div>
-                    </div>
-
-                    <div class="card cook-time">
-                        <div class="icon">
-                            <i class="ph-bold ph-cooking-pot"></i>
-                        </div>
-                        <div class="details">
-                            <p>Cook Time</p>
-                            <span>15 mins</span>
-                        </div>
-                    </div>
-
-                    <div class="card calories">
-                        <div class="icon">
-                            <i class="ph-bold ph-fire-simple"></i>
-                        </div>
-                        <div class="details">
-                            <p>Calories</p>
-                            <span>450 cal</span>
-                        </div>
-                    </div>
-
-                    <div class="card meal-type">
-                        <div class="icon">
-                            <i class="ph-bold ph-fork-knife"></i>
-                        </div>
-                        <div class="details">
-                            <p>Meal Type</p>
-                            <span>Dinner</span>
-                        </div>
-                    </div>
-
-                    <div class="card tags">
-                        <div class="icon">
-                            <i class="ph-bold ph-tag"></i>
-                        </div>
-                        <div class="details">
-                            <p>Tags</p>
-                            <span>Vegetarian</span>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="divider-x"></div>
-
-                <div class="ingredients-and-instructions">
-
-                    <div class="ingredients">
-                        <div class="title">
-                            <div class="icon">
-                                <i class="ph-bold ph-list-dashes"></i>
-                            </div>
-                            Ingredients
-                        </div>
-
-                        <ul>
-                            <li>200g pasta</li>
-                            <li>3 cloves garlic (minced)</li>
-                            <li>2 tbsp olive oil</li>
-                            <li>1 cup heavy cream</li>
-                            <li>1/2 cup grated parmesan cheese</li>
-                            <li>Salt to taste</li>
-                            <li>Black pepper to taste</li>
-                            <li>Fresh parsley (chopped)</li>
-                        </ul>
-                    </div>
-
-                    <div class="instructions">
-                        <div class="title">
-                            <div class="icon">
-                                <i class="ph-bold ph-notebook"></i>
-                            </div>
-                            Instructions
-                        </div>
-
-                        <div class="instruction-item">
-                            <span class="number">1</span>
-                            <p>Bring a large pot of salted water to boil. Add pasta and cook according to package
-                                instructions. Drain and set aside.</p>
-                        </div>
-
-                        <div class="instruction-item">
-                            <span class="number">2</span>
-                            <p>In a pan, heat olive oil over medium heat. Add minced garlic and sauté until
-                                fragrant.</p>
-                        </div>
-
-                        <div class="instruction-item">
-                            <span class="number">3</span>
-                            <p>Add heavy cream to the pan and stir well. Let it simmer for 2-3 minutes.</p>
-                        </div>
-
-                        <div class="instruction-item">
-                            <span class="number">4</span>
-                            <p>Add parmesan cheese, salt, and black pepper. Stir until the sauce thickens.</p>
-                        </div>
-
-                        <div class="instruction-item">
-                            <span class="number">5</span>
-                            <p>Add cooked pasta to the sauce and toss until well coated.</p>
-                        </div>
-
-                        <div class="instruction-item">
-                            <span class="number">6</span>
-                            <p>Garnish with chopped parsley and serve hot.</p>
-                        </div>
-
-                    </div>
-
+                <div class="detailed-recipe-container">
                 </div>
 
             </div>

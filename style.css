@@ -1,102 +1,32 @@
 :root {
-
-  /* ==========================
-       BODY
-    ========================== */
-
   --body-bg: #F8FAFC;
   --body-color: #374151;
   --body-secondary-color: #6B7280;
-
-  /* ==========================
-       PRIMARY
-    ========================== */
-
   --primary-color: #F97316;
-  --primary-hover: #EA580C;
-  --primary-soft: #FFF7ED;
-
-  /* ==========================
-       CARDS
-    ========================== */
-
   --card-bg: #FFFFFF;
   --card-border: 1px solid #E5E7EB;
   --card-shadow: 0 4px 20px rgba(15, 23, 42, .06);
-  --card-hover-shadow: 0 12px 30px rgba(15, 23, 42, .10);
-
-  /* ==========================
-       SIDEBAR RECIPE ITEM
-    ========================== */
-
   --recipe-item-bg: #FFFFFF;
-  --recipe-item-hover-bg: #FFF7ED;
   --recipe-item-active-bg: #FFF7ED;
   --recipe-item-border: 1px solid #E5E7EB;
-
-  /* ==========================
-       RECIPE NUMBER
-    ========================== */
-
   --recipe-number-bg: #FFF7ED;
   --recipe-number-color: #F97316;
-
-  /* ==========================
-       SEARCH INPUT
-    ========================== */
-
   --input-bg: #FFFFFF;
   --input-border: 1.5px solid #D1D5DB;
-  --input-focus-border: 1px solid #F97316;
   --placeholder-color: #9CA3AF;
-
-  /* ==========================
-       BUTTON
-    ========================== */
-
-  --button-bg: #F97316;
-  --button-hover-bg: #EA580C;
-  --button-color: #FFFFFF;
-
-  /* ==========================
-       BADGE
-    ========================== */
-
   --badge-bg: #FFF7ED;
   --badge-color: #EA580C;
-
   --prep-icon-bg: #F0FDF4;
   --prep-icon-color: #65A30D;
-  --prep-icon-border: 1px solid #DCFCE7;
-
   --cook-icon-bg: #FFF7ED;
   --cook-icon-color: #F97316;
-  --cook-icon-border: 1px solid #FED7AA;
-
   --calories-icon-bg: #F5F3FF;
   --calories-icon-color: #7C3AED;
-  --calories-icon-border: 1px solid #DDD6FE;
-
   --meal-icon-bg: #EFF6FF;
   --meal-icon-color: #2563EB;
-  --meal-icon-border: 1px solid #DBEAFE;
-
   --tag-icon-bg: #FDF2F8;
   --tag-icon-color: #EC4899;
-  --tag-icon-border: 1px solid #FBCFE8;
-
-  /* ==========================
-       IMAGE
-    ========================== */
-
-  --image-border: 1px solid #E5E7EB;
-
-  /* ==========================
-       DIVIDER
-    ========================== */
-
   --divider: 1px solid #E5E7EB;
-
 }
 
 * {
@@ -114,62 +44,61 @@ body {
 .container {
   max-width: 1450px;
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: clamp(10px, 2vw, 20px);
 }
 
 .header {
   background-color: var(--card-bg);
   box-shadow: var(--card-shadow);
   border: var(--card-border);
-  border-radius: 8px;
-  padding: 10px 20px;
+  border-radius: clamp(4px, 1vw, 8px);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding: 18px;
+  gap: clamp(10px, 2vw, 20px);
+  padding: clamp(10px, 1.8vw, 18px);
 }
 
 .header .logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: clamp(8px, 1.2vw, 12px);
 }
 
 .header h1 {
-  font-size: 24px;
+  font-size: clamp(18px, 2.5vw, 24px);
 }
 
 .header .icon {
-  height: 40px;
-  width: 40px;
-  border-radius: 6px;
+  height: clamp(32px, 4vw, 40px);
+  width: clamp(32px, 4vw, 40px);
+  border-radius: clamp(4px, 0.8vw, 6px);
   background-color: var(--primary-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 26px;
+  font-size: clamp(20px, 2.6vw, 26px);
   color: #fff;
 }
 
 .search-bar {
   position: relative;
   display: flex;
-  gap: 12px;
+  gap: clamp(8px, 1.2vw, 12px);
   width: 100%;
-  max-width: 300px;
+  max-width: 350px;
 }
 
 .search-bar input {
   margin-left: auto;
-  height: 40px;
+  height: clamp(34px, 4vw, 40px);
   width: 100%;
-  padding: 0 12px;
-  padding-left: 34px;
+  padding: 0 clamp(8px, 1.2vw, 12px);
+  padding-left: clamp(26px, 3.4vw, 34px);
   background-color: var(--input-bg);
   border: var(--input-border);
-  border-radius: 5px;
+  border-radius: clamp(3px, 0.5vw, 5px);
   outline: none;
   transition: border .2s ease;
 }
@@ -178,7 +107,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: 12px;
+  left: clamp(8px, 1.2vw, 12px);
   color: var(--placeholder-color);
 }
 
@@ -191,21 +120,22 @@ body {
 }
 
 main {
-  margin-top: 20px;
+  margin-top: clamp(12px, 2vw, 20px);
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+  gap: clamp(12px, 2vw, 20px);
 }
 
 .side-bar {
+  position: relative;
   flex-shrink: 0;
   flex-grow: 1;
-  max-width: 400px;
+  width: clamp(280px, 100%, 400px);
+  max-width: 100%;
   background-color: var(--card-bg);
   border: var(--card-border);
   box-shadow: var(--card-shadow);
-  border-radius: 8px;
-  max-height: 750px;
+  border-radius: clamp(4px, 1vw, 8px);
+  max-height: clamp(350px, 80vh, 810px);
   overflow: auto;
 }
 
@@ -223,16 +153,16 @@ main {
 }
 
 .side-bar .side-bar-title {
-  padding: 14px 16px;
-  font-size: 20px;
+  padding: clamp(10px, 1.4vw, 14px) clamp(12px, 1.6vw, 16px);
+  font-size: clamp(16px, 2vw, 20px);
 }
 
 .side-bar .recipe-item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 12px 16px;
-  padding-right: 20px;
+  gap: clamp(8px, 1.2vw, 12px);
+  padding: clamp(8px, 1.2vw, 12px) clamp(12px, 1.6vw, 16px);
+  padding-right: clamp(12px, 2vw, 20px);
   background-color: var(--recipe-item-bg);
   border-bottom: var(--recipe-item-border);
   border-left: 4px solid transparent;
@@ -250,20 +180,20 @@ main {
 }
 
 .side-bar .recipe-item .recipe-id {
-  display: inline;
   background-color: var(--recipe-number-bg);
   color: var(--recipe-number-color);
-  height: 28px;
-  width: 28px;
+  height: clamp(22px, 2.8vw, 28px);
+  width: clamp(22px, 2.8vw, 28px);
   border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: clamp(12px, 1.4vw, 14px);
   font-weight: 600;
 }
 
 .side-bar .recipe-item.active .recipe-id {
-  font-size: 15px;
+  font-size: clamp(12px, 1.5vw, 15px);
   flex-shrink: 0;
   background-color: var(--primary-color);
   color: #fff;
@@ -272,14 +202,14 @@ main {
 .side-bar .recipe-item .recipe-details {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
+  gap: clamp(8px, 1.2vw, 12px);
 }
 
 .side-bar .recipe-item .recipe-details .recipe-image {
   flex-shrink: 0;
-  height: 70px;
-  width: 80px;
-  border-radius: 8px;
+  height: clamp(50px, 7vw, 70px);
+  width: clamp(60px, 8vw, 80px);
+  border-radius: clamp(4px, 1vw, 8px);
   overflow: hidden;
 }
 
@@ -290,21 +220,21 @@ main {
 }
 
 .side-bar .recipe-item .recipe-details .recipe-name {
-  font-size: 16px;
+  font-size: clamp(14px, 1.6vw, 16px);
 }
 
 .side-bar .recipe-item .recipe-details .cuisine {
-  font-size: 12px;
+  font-size: clamp(10px, 1.2vw, 12px);
   font-weight: 500;
   color: var(--body-secondary-color);
-  margin: 11px 0;
+  margin: clamp(6px, 1.1vw, 11px) 0;
 }
 
 .side-bar .recipe-item .recipe-details .rating-and-time {
   display: flex;
   align-items: center;
-  gap: 6px;
-  font-size: 12px;
+  gap: clamp(4px, 0.6vw, 6px);
+  font-size: clamp(10px, 1.2vw, 12px);
   color: var(--body-secondary-color);
   font-weight: 500;
 }
@@ -314,55 +244,52 @@ main {
 }
 
 .detailed-recipe {
+  position: relative;
   flex-grow: 1;
   background-color: var(--card-bg);
   border: var(--card-border);
   box-shadow: var(--card-shadow);
-  border-radius: 8px;
-  padding: 20px;
+  border-radius: clamp(4px, 1vw, 8px);
+  padding: clamp(12px, 2vw, 20px);
+  min-height: clamp(350px, 60vh, 750px);
 }
 
 .detailed-recipe .recipe-number {
   background-color: var(--badge-bg);
   color: var(--badge-color);
   width: fit-content;
-  padding: 8px 14px;
-  font-size: 14px;
+  padding: clamp(6px, 1vw, 8px) clamp(10px, 1.4vw, 14px);
+  font-size: clamp(12px, 1.4vw, 14px);
   font-weight: 500;
   border-radius: 5px;
-  margin-bottom: 18px;
+  margin-bottom: clamp(10px, 1.8vw, 18px);
 }
 
 .detailed-recipe .top-content {
   display: flex;
   justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap-reverse;
+  gap: clamp(12px, 2vw, 20px);
 }
 
 .detailed-recipe .top-content .left .recipe-name {
-  font-size: 30px;
-  max-width: 400px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  font-size: clamp(20px, 3vw, 30px);
 }
 
 .detailed-recipe .top-content .left .meta-info {
-  margin-top: 20px;
+  margin-top: clamp(12px, 2vw, 20px);
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  font-size: 14px;
+  gap: clamp(8px, 1.4vw, 14px);
+  font-size: clamp(12px, 1.4vw, 14px);
   color: var(--body-secondary-color);
 }
 
 .detailed-recipe .top-content .left .meta-info div {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: clamp(4px, 0.6vw, 6px);
   border-right: var(--divider);
-  padding-right: 14px;
+  padding-right: clamp(8px, 1.4vw, 14px);
   white-space: nowrap;
 }
 
@@ -373,14 +300,14 @@ main {
 
 .detailed-recipe .top-content .left .meta-info div i {
   color: var(--primary-color);
-  font-size: 16px;
+  font-size: clamp(13px, 1.6vw, 16px);
 }
 
 .detailed-recipe .top-content .image {
   width: 100%;
-  max-width: 350px;
-  height: 220px;
-  border-radius: 8px;
+  max-width: clamp(250px, 100%, 350px);
+  height: clamp(160px, 22vw, 220px);
+  border-radius: clamp(4px, 1vw, 8px);
   overflow: hidden;
 }
 
@@ -391,27 +318,27 @@ main {
 }
 
 .detailed-recipe .cards {
-  margin-top: 20px;
+  margin-top: clamp(12px, 2vw, 20px);
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  gap: 16px;
+  gap: clamp(10px, 1.6vw, 16px);
 }
 
 .detailed-recipe .cards .card {
+  white-space: nowrap;
   width: 100%;
-  max-width: 145px;
+  max-width: clamp(150px, 1vw, 160px);
   display: flex;
-  gap: 12px;
-  padding: 12px;
+  gap: clamp(8px, 1.2vw, 12px);
+  padding: clamp(8px, 1.2vw, 12px);
   border: var(--card-border);
   border-width: 1.5px;
-  border-radius: 8px;
+  border-radius: clamp(4px, 1vw, 8px);
 }
 
 .detailed-recipe .cards .card .icon {
-  height: 26px;
-  width: 26px;
+  height: clamp(20px, 2.6vw, 26px);
+  width: clamp(20px, 2.6vw, 26px);
   border-radius: 5px;
   display: flex;
   justify-content: center;
@@ -444,14 +371,14 @@ main {
 }
 
 .detailed-recipe .cards .card .details p {
-  margin-bottom: 8px;
-  font-size: 13px;
+  margin-bottom: clamp(4px, 0.8vw, 8px);
+  font-size: clamp(11px, 1.3vw, 13px);
   font-weight: 500;
   color: var(--body-secondary-color);
 }
 
 .detailed-recipe .cards .card .details span {
-  font-size: 14px;
+  font-size: clamp(12px, 1.4vw, 14px);
   display: block;
   font-weight: 500;
 }
@@ -459,34 +386,34 @@ main {
 .divider-x {
   flex-grow: 1;
   border-bottom: var(--divider);
-  margin: 20px 0;
+  margin: clamp(12px, 2vw, 20px) 0;
 }
 
 .ingredients-and-instructions {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: clamp(12px, 2vw, 20px);
 }
 
 .ingredients-and-instructions .title {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 16px;
+  gap: clamp(5px, 0.8vw, 8px);
+  font-size: clamp(14px, 1.6vw, 16px);
   font-weight: 500;
-  margin-bottom: 20px;
+  margin-bottom: clamp(12px, 2vw, 20px);
 }
 
 .ingredients-and-instructions .title .icon {
-  height: 28px;
-  width: 28px;
+  height: clamp(22px, 2.8vw, 28px);
+  width: clamp(22px, 2.8vw, 28px);
   border-radius: 5px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--prep-icon-bg);
   color: var(--prep-icon-color);
-  font-size: 18px;
+  font-size: clamp(15px, 1.8vw, 18px);
 }
 
 .ingredients .title .icon {
@@ -499,30 +426,32 @@ main {
   color: var(--cook-icon-color);
 }
 
-.ingredients-and-instructions .ingredients {
-  padding-right: 80px;
+.ingredients-and-instructions .ingredients,
+.ingredients-and-instructions .instructions {
+  flex-grow: 1;
 }
 
 .ingredients-and-instructions .ingredients ul {
-  margin-left: 20px;
+  margin-left: clamp(12px, 2vw, 20px);
 }
 
 .ingredients-and-instructions .ingredients ul li {
-  margin-bottom: 8px;
-  font-size: 14px;
+  margin-bottom: clamp(4px, 0.8vw, 8px);
+  font-size: clamp(12px, 1.4vw, 14px);
 }
 
 .ingredients-and-instructions .instructions .instruction-item {
   display: flex;
-  gap: 10px;
+  gap: clamp(6px, 1vw, 10px);
   flex-grow: 1;
-  font-size: 14px;
-  margin-bottom: 8px;
+  font-size: clamp(12px, 1.4vw, 14px);
+  margin-bottom: clamp(4px, 0.8vw, 8px);
 }
 
 .ingredients-and-instructions .instructions .instruction-item span {
-  height: 25px;
-  width: 25px;
+  flex-shrink: 0;
+  height: clamp(20px, 2.5vw, 25px);
+  width: clamp(20px, 2.5vw, 25px);
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -532,6 +461,85 @@ main {
 }
 
 .ingredients-and-instructions .instructions .instruction-item p {
-  line-height: 20px;
-  max-width: 400px;
+  line-height: clamp(18px, 2vw, 20px);
+  max-width: clamp(280px, 100%, 400px);
+  margin-bottom: clamp(4px, 0.8vw, 8px);
+}
+
+.empty-state {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: var(--card-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(20px, 4vw, 40px) clamp(15px, 3vw, 30px);
+  width: 100%;
+  height: 100%;
+  min-height: clamp(220px, 30vh, 320px);
+}
+
+.empty-state .empty-icon {
+  font-size: clamp(32px, 5vw, 50px);
+  color: var(--placeholder-color);
+  margin-bottom: clamp(10px, 1.8vw, 16px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(55px, 8vw, 85px);
+  height: clamp(55px, 8vw, 85px);
+  background-color: var(--body-bg);
+  border-radius: 50%;
+}
+
+.empty-state h2,
+.empty-state h3 {
+  font-size: clamp(16px, 2.2vw, 22px);
+  font-weight: 700;
+  color: var(--body-color);
+  margin-bottom: clamp(6px, 1vw, 10px);
+}
+
+.empty-state p {
+  font-size: clamp(12px, 1.5vw, 14px);
+  color: var(--body-secondary-color);
+  max-width: clamp(240px, 80%, 380px);
+  line-height: 1.5;
+}
+
+.side-bar .empty-state {
+  top: clamp(45px, 6vw, 60px);
+  justify-content: start;
+  height: fit-content;
+  display: none;
+}
+
+@media (max-width: 1195px) {
+  main {
+    flex-wrap: wrap;
+  }
+
+  .side-bar {
+    max-width: 100%;
+    max-height: clamp(250px, 40vh, 340px);
+  }
+}
+
+@media (max-width: 880px) {
+  .detailed-recipe .top-content {
+    flex-wrap: wrap-reverse;
+  }
+
+  .detailed-recipe .cards {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 400px) {
+  * {
+    cursor: default !important;
+  }
 }
